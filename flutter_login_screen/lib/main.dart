@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Colors.deepPurple,
                 ),
               ),
               SizedBox(height: 10.0),
@@ -39,13 +39,26 @@ class LoginScreen extends StatelessWidget {
                 "Login to your Battle Flex account",
                 style: TextStyle(
                   fontSize: 16.0,
-                  color: Colors.blueGrey,
+                  color: Colors.deepPurple,
                 ),
               ),
               SizedBox(height: 30.0),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Email",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
               TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Email',
+                  hintText: 'Enter email here', // Added placeholder for email
+                  //labelText: 'Email',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide(
@@ -54,11 +67,23 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
+              SizedBox(height: 30.0),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Password",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
               TextFormField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  labelText: 'Password',
+                  hintText: 'Enter password here', // Added placeholder for password
+                  //labelText: 'Password',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide(
@@ -70,7 +95,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 30.0),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.purple, // Background color
+                  backgroundColor: Colors.deepPurple, // Background color
                   minimumSize: Size(double.infinity, 50), // Full-width button
                 ),
                 onPressed: () {},
@@ -104,7 +129,7 @@ class LoginScreen extends StatelessWidget {
                       TextSpan(
                         text: 'Reset Now',
                         style: TextStyle(
-                          color: Colors.purple,
+                          color: Colors.deepPurple,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -113,15 +138,32 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              TextButton(
-                onPressed: () {
-                  // Add your need help logic here
-                },
-                child: Text(
-                  'Need help?',
-                  style: TextStyle(color: Colors.purple),
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        // Add your need help logic here
+                      },
+                      child: Text(
+                        'Need help?',
+                        style: TextStyle(color: Colors.deepPurple),
+                      ),
+                    ),
+                    SizedBox(width: 10), // Add spacing between the two texts
+                    Text(
+                      'Contact Aamir',
+                      style: TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ),
+
             ],
           ),
         ),
